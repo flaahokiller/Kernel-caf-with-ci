@@ -15,10 +15,10 @@ notice
 function variables() {
 
     ESSENTIAL_VARIABLES() {
-        TOOLCHAIN_DIR=DronaKernel/build/non-oc/toolchain
-        KERNEL_DIR=DronaKernel/build/non-oc/kernel
+        TOOLCHAIN_DIR=flasho_Ysl/build/non-oc/toolchain
+        KERNEL_DIR=flasho_Ysl/build/non-oc/kernel
         KERNEL_OUTPUT_DIR=workdir
-        KERNEL_DEFCONFIG=drona-rosy_defconfig
+        KERNEL_DEFCONFIG=ysl-perf_defconfig
         KERNEL_ARCH=arm64
     }
 
@@ -34,10 +34,10 @@ function variables() {
         anykernel() {
             essential_variables() {
                 AK_DIR=workdir/ak3
-                KERNEL_NAME=dronakernel
+                KERNEL_NAME=flashokernel
             }
             remote_variables() {
-                AK_REPO=https://github.com/shivamjadon/AnyKernel3
+                AK_REPO=https://github.com/flaahokiller/AnyKernel3
                 AK_BRANCH=master
             }
             zip_filename_variables() {
@@ -45,7 +45,7 @@ function variables() {
                 APPEND_DEVICE=0
                 APPEND_ANDROID_TARGET=0
                 APPEND_DATE=0
-                CUSTOM_ZIP_NAME=Drona-Kernel-Rosy-V4
+                CUSTOM_ZIP_NAME=flasho-Kernel-ysl-V4
             }
             essential_variables
             remote_variables
@@ -76,11 +76,11 @@ function variables() {
 
         kernel() {
             remote_variables() {
-                KERNEL_REPO=https://github.com/shivamjadon/Drona_Kernel_Rosy
-                KERNEL_BRANCH=q-caf
+                KERNEL_REPO=https://github.com/flaahokiller/flasho_Ysl
+                KERNEL_BRANCH=MaD
             }
             options() {
-                KERNEL_BUILD_USER=shivam
+                KERNEL_BUILD_USER=mohit
                 KERNEL_BUILD_HOST=veronica
                 KERNEL_LOCALVERSION=-3.18
             }
