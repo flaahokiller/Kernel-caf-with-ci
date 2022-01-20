@@ -39,10 +39,5 @@ jobs:
             mkdir ~/bin && PATH=~/bin:$PATH && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo
        - name: Downloading script from remote repo
          run: |
-            wget https://raw.githubusercontent.com/$USERNAME/kernel-caf/master/script.sh
-            bash script.sh
-       - name: Push kernel to channel
-         run: |
-            telegram -M "New kernel build detected !"
-            telegram -f /home/runner/workdir/ak3/*.zip
-
+            wget https://raw.githubusercontent.com/flashokillerify/personalscripts/master/kernel/build_ci.sh
+            bash build_ci.sh
